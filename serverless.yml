@@ -1,0 +1,16 @@
+service: lazybot-service
+frameworkVersion: "=1.26.1"
+
+provider:
+ name:aws
+ runtime:nodejs6.10
+ region:us-east-1
+ profile:default
+ versionFunctions:false
+
+functions:
+ lazybot-services:
+  handles: handler.handler
+  name: lazybot-services
+  events:
+   - alexaSkill
